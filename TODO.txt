@@ -1,0 +1,19 @@
+### Implementation
+* Add hierchical softmax 
+* add negative sampling (the paper uses 15)
+* Think about if ADAM is the best optimizer 
+* Add extrinsic evaluation from paper by ranking on sim words WordSim353 dataset (Finkelstein et al., 2002; Agirre et al., 2009)
+
+### Idea extensions
+* Can there be an input vector that represents BoW contexts and dep contexts
+	* Input = word, dep context’s, w-1, w-2, w+1,w+2 (how to deal with dynamic size)
+
+* Combine this with CharRNN/Image caption generating techniques . 
+	* Input= word + dependency
+	* Output= sentences where those dependencies are manifested
+	* Example: astronaut + dobj_flies = a sentence about an astronaut flying  
+
+* Clustering based on word2vec/word2vecf as 2 separate tunable features (someone has probably done this)
+
+
+* Use this to detect phrasal verbs?
